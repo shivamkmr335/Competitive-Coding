@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+   int one=0,two=0,three=0,i,pl,k;
+   char s[100];
+   scanf("%s",&s);
+   k=strlen(s);
+   pl=k/2;
+   for(i=0;i<(k);i+=2)
+   {
+       if(s[i]=='1')
+       one++;
+       else if(s[i]=='2')
+       two++;
+       else
+       three++;
+   }
+   while(one>0)
+   {
+       printf("1");
+       if(pl!=0)
+        {
+           printf("+");
+          pl--;
+        }
+        one--;
+    }
+     while(two>0)
+   {
+       printf("2");
+       if(pl!=0)
+        {
+           printf("+");
+          pl--;
+        }
+        two--;
+    }
+      while(three>0)
+   {
+       printf("3");
+       if(pl!=0)
+        {
+           printf("+");
+          pl--;
+        }
+        three--;
+    }
+}

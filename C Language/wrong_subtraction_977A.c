@@ -1,0 +1,19 @@
+#include<stdio.h>
+main()
+{
+    int a,b,i;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    while(b>0)
+    {
+        if(a%10==0)
+            {a=a/10;}
+        else
+            {a=a-1;}
+        b--;
+    }
+    if(a<=0)
+        printf("%d",0);
+    else
+        printf("%d",a);
+}

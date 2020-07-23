@@ -1,0 +1,42 @@
+#include<stdio.h>
+main()
+{
+    int a,i,j,count=0;
+    scanf("%d",&a);
+    char ch[a][5];
+    for(i=0;i<a;i++)
+    {
+        scanf("%s",&ch[i]);
+    }
+    for(i=0;i<a;i++)
+    {
+        if((ch[i][0]=='O'&&ch[i][1]=='O')||(ch[i][3]=='O'&&ch[i][4]=='O'))
+        {
+            count++;
+            if(ch[i][0]=='O'&&ch[i][1]=='O')
+             {
+                ch[i][0]='+';
+                ch[i][1]='+';
+             }
+            else
+             {
+                ch[i][3]='+';
+                ch[i][4]='+';
+             }
+             break;
+        }
+    }
+    if(count!=0)
+           {
+            printf("YES\n");
+             for(i=0;i<a;i++)
+    {
+        for(j=0;j<5;j++)
+        printf("%c",ch[i][j]);
+        printf("\n");
+    }
+           }
+        else
+            printf("NO\n");
+}
+
